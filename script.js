@@ -13,7 +13,7 @@ document.getElementById('pasteForm').addEventListener('submit', async (e) => {
   const content = document.getElementById('content').value;
   const password = document.getElementById('password').value;
   const expiry = document.getElementById('expiry').value;
-  const link = `https://yourdomain.com/p/${pasteId}`;
+  const link = `https://ssayeb7.github.io/p/${pasteId}`;
 
 
   // Prepare data for Supabase
