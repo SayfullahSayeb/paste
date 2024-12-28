@@ -13,6 +13,8 @@
     </header>
     <main>
       <form id="pasteForm">
+        <div id="error" class="error hidden"></div>
+        
         <label for="title">Title:</label>
         <input type="text" id="title" placeholder="Enter a title..." required>
         
@@ -34,19 +36,12 @@
       </form>
       <div id="result" class="hidden">
         <h2>Your Paste Link</h2>
-        <p id="link"></p>
-        <button id="copyButton">Copy to Clipboard</button>
-      </div>
-
-
-      <div id="result" class="hidden">
-        <h2>Your Paste Link</h2>
         <a id="link" href="#" target="_blank" class="paste-link"></a>
         <button id="copyButton">Copy URL</button>
       </div>
-      
     </main>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
   <script src="script.js"></script>
 </body>
 </html>
