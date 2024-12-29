@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevPaste - Share Your Code</title>
+    <link rel="stylesheet" href="./style.css" />
+    <meta name="description" content="Share code snippets, text, and logs securely with optional password protection and expiry times." />
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <div id="create-paste" class="section">
+          <h1>DevPaste</h1>
+          <input 
+            type="text" 
+            id="paste-title" 
+            placeholder="Paste Title"
+            class="input-field"
+          />
+          <textarea 
+            id="paste-content" 
+            placeholder="Enter your text, code, or logs here..."
+            class="input-field"
+            spellcheck="false"
+          ></textarea>
+          <div class="options">
+            <select id="expiry-time" class="input-field">
+              <option value="3600">1 Hour</option>
+              <option value="86400">1 Day</option>
+              <option value="604800">1 Week</option>
+              <option value="2592000">1 Month</option>
+              <option value="0">Never</option>
+            </select>
+            <input 
+              type="password" 
+              id="paste-password" 
+              placeholder="Password (optional)"
+              class="input-field"
+            />
+          </div>
+          <button id="create-button">Create Paste</button>
+        </div>
+
+        <div id="view-paste" class="section hidden">
+          <h2 id="view-title"></h2>
+          <div id="password-prompt" class="hidden">
+            <input 
+              type="password" 
+              id="password-input" 
+              placeholder="Enter password"
+              class="input-field"
+            />
+            <button id="submit-password">Submit</button>
+          </div>
+          <pre id="view-content"></pre>
+          <div class="actions">
+            <button id="copy-button">Copy Content</button>
+            <button id="new-paste">Create New Paste</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
