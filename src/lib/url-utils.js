@@ -1,5 +1,5 @@
 export function generatePasteUrl(id) {
-  return `${window.location.origin}/paste/#${id}`;
+  return `${window.location.origin}/project/#${id}`; // Changed from /paste/ to /project/
 }
 
 export function getPasteIdFromUrl() {
