@@ -27,8 +27,8 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+          VITE_SUPABASE_URL: 'https://jbugzbnbqwnnfhsherla.supabase.co'
+          VITE_SUPABASE_ANON_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImpidWd6Ym5icXdubmZoc2hlcmxhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzU0NTg1MjIsImV4cCI6MjA1MTAzNDUyMn0.DnWK5_fufN15MFGLTk87kf4tuW2Km1poTJU4sywndnc'
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
