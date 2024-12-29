@@ -17,16 +17,24 @@ export async function handleCreatePaste() {
       return;
     }
 
+    console.log('Creating paste with:', { 
+      hasTitle: !!title, 
+      contentLength: content.length,
+      hasPassword: !!password,
+      expiryTime 
+    });
+
     const id = await createPaste({ title, content, password, expiryTime });
+    console.log('Paste created with ID:', id);
+
     const url = generatePasteUrl(id);
-    
     await copyToClipboard(url);
     alert('Paste URL copied to clipboard: ' + url);
     window.location.hash = id;
     location.reload();
   } catch (error) {
-    console.error('Error creating paste:', error);
-    showError('Failed to create paste. Please try again.');
+    console.error('Error in handleCreatePaste:', error);
+    showError(error.message || 'Failed to create paste. Please try again.');
   } finally {
     toggleLoading(elements.createButton, false);
   }
